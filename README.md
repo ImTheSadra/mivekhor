@@ -1,9 +1,9 @@
 mive khor
 =========
 
-<img src="./icon.png" width="50%" algin="left">
+<img src="./icon.png" width="30%" algin="left">
 
-ایده اقای [پیمان مجیدی معید ](http://peymanmajidi.ir/)
+ایده اقای [پیمان مجیدی معین ](http://peymanmajidi.ir/)
 
 how to play
 -----------
@@ -16,3 +16,5 @@ how to play
 - خبیس کیست؟
 	موجود بانمکی که نباید گول ظاهرش را بخورید
 	این موجود با نمک دزد میوه است و شما باید جلوی اورا بگیرید
+	
+<img src="./playing.png" algin="center">
