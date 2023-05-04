@@ -10,6 +10,9 @@ from .khabis import Khabis
 # make screen
 w, h = 600, 600
 screen = display.set_mode((w, h))
+display.set_caption("mive khor")
+icon = image.load("./icon.png")
+display.set_icon(icon)
 
 # asigment's
 font = Font(get_default_font(), 25)
@@ -52,7 +55,7 @@ def gameOver():
 
 def gameWin():
 	text = font2.render("Game Win", True, (0,255,0))
-	text2 = font.render("Press any key to continue...", True, (0,255,0))
+	text2 = font.render("press any key to continue...", True, (0,255,0))
 	screen.fill((255,255,255))
 	screen.blit(text,
 		(
@@ -111,6 +114,9 @@ while True:
 
 	for ev in event.get():
 		if ev.type == QUIT:sys.exit()
+		if ev.type == KEYDOWN:
+			if ev.key == K_TAB:
+				image.save(screen, "./ss.png")
 		player.checkEvent(ev)
 
 	display.update()
