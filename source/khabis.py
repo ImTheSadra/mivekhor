@@ -3,7 +3,7 @@ from pygame import *
 class Khabis:
 	mode = 0
 	fruit = None
-	speed = 3
+	speed = 1
 	modeStr = ""
 	def __init__(self, window:Surface):
 		self.window = window

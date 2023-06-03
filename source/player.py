@@ -6,7 +6,7 @@ class Player:
 	keyTop = False
 	keyDown = False
 	score = 0
-	def __init__(self, window:Surface, speed:int=5):
+	def __init__(self, window:Surface, speed:int=2):
 		self.window = window
 		self.speed = speed
 		self.rightOrLeft = "R"
@@ -25,38 +25,32 @@ class Player:
 
 	def getSurface(self):
 		img = image.load(f"./package/images/player/{self.rightOrLeft}run{str(round(self.mode))}.png")
-		#img = transform.scale(
-		#	img, (img.get_width()*2, img.get_height()*2)
-		#)
 		self.img = img
 		return img
 
 	def draw(self):
-		#self.mode += 0.3
-		#if round(self.mode) >= 9:
-		#	self.mode = 0
 		if self.keyLeft:
 			if self.x > 30:
 				self.x -= self.speed
-			self.mode += 0.3
+			self.mode += 0.1
 			if round(self.mode) >= 9:
 				self.mode = 0
 		elif self.keyRight:
 			if self.x < self.window.get_width()-30-self.img.get_width():
 				self.x += self.speed
-			self.mode += 0.3
+			self.mode += 0.1
 			if round(self.mode) >= 9:
 				self.mode = 0
 		if self.keyTop:
 			if self.y > 20:
 				self.y -= self.speed
-			self.mode += 0.3
+			self.mode += 0.1
 			if round(self.mode) >= 9:
 				self.mode = 0
 		elif self.keyDown:
 			if self.y < self.window.get_height()-self.img.get_height()-30:
 				self.y += self.speed
-			self.mode += 0.3
+			self.mode += 0.1
 			if round(self.mode) >= 9:
 				self.mode = 0
 
